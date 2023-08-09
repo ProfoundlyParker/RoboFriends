@@ -1,5 +1,6 @@
 import React from "react";
 
+// Search box that updates each time the input is changed
 const SearchBox = ({ searchChange }) => {
     return (
         <div className="pa2">

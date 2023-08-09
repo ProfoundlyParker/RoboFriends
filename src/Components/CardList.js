@@ -1,6 +1,7 @@
 import React from "react";
 import Card from './Card';
 
+//Maps through JSON API to get robot's info
 const CardList = ({ robots }) => {
     return (
     <div>

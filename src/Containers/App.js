@@ -6,6 +6,7 @@ import "./App.css";
 
 
 const App = () => { 
+    // Set State for robots & filteredbots
     const [robots, setRobots] = useState([])
     const [searchfield, setSearchField] = useState('')
     const [filtered, setFilteredRobots] = useState(robots)
@@ -16,6 +17,7 @@ const App = () => {
              .then(users => {setRobots(users.users)})
     }, [])
 
+    //Can search for robots based on first or last name, or email
     useEffect(()=> {
         const filtered = robots.filter(users => {
             return users.firstName.toLowerCase().includes(searchfield.toLowerCase()) || 
@@ -27,7 +29,7 @@ const App = () => {
    const onSearchChange = (event) => {
         setSearchField(event.target.value);
     }
-
+    //Returns waiting for API if API link is down and can't load bots
         return !robots.length ?
         <h1>Waiting for API...</h1> :
         (
