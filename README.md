@@ -9,7 +9,7 @@ JSON Placeholder data used in ZTM course: <a href='https://jsonplaceholder.typic
 ![robofriends](src/Readme-imgs/robofriends.png)
 
 ## Description
-<p>A React app that uses DummyJSON API to display robot cards. Built with <b>React.js</b>, <b>Tachyon CSS</b>, <b>DummyJSON API</b>, deployed on <b>GitHub Pages</b></p>
+<p>A React app that uses DummyJSON API to display robot cards. Built with <b>React.js</b>, <b>React Hooks</b>, <b>Tachyon CSS</b>, <b>DummyJSON API</b>, deployed on <b>GitHub Pages</b></p>
 
 <p><i>A huge thanks to Andrei Neagoie for creating <a href='https://zerotomastery.io/courses/coding-bootcamp/'>Zero to Mastery Complete Web Developer Course</a> and the entire Zero To Mastery platform to help encourage new developers like myself to pursue their passions!</i></p><br>
 
