@@ -5,6 +5,7 @@ import {
     REQUEST_ROBOTS_FAILED
 } from "./constants.js"
 
+// Searchfield action
 export const setSearchField = (text) => {
     return {
     type: CHANGE_SEARCH_FIELD,
@@ -12,6 +13,7 @@ export const setSearchField = (text) => {
     }
 }
 
+// Robot API action
 export const requestRobots = () => (dispatch) => {
     dispatch({ type: REQUEST_ROBOTS_PENDING });
     fetch('https://dummyjson.com/users')

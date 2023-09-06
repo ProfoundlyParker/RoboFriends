@@ -5,10 +5,12 @@ import {
     REQUEST_ROBOTS_FAILED
 } from "./constants.js"
 
+// Initial Search state
 const initialStateSearch = {
     searchField: ''
 }
 
+// Search robots
 export const searchRobots = (state=initialStateSearch, { type, payload }) => {
     switch(type) {
         case CHANGE_SEARCH_FIELD:
@@ -21,12 +23,14 @@ export const searchRobots = (state=initialStateSearch, { type, payload }) => {
     }
 }
 
+// Initial robot state
 const initialStateRobots = {
     isPending: false,
     users: [],
     error: null
 }
 
+// Robot API actions
 export const getRobotsReducer = (state=initialStateRobots, action) => {
     switch(action.type) {
         case REQUEST_ROBOTS_PENDING:

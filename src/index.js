@@ -10,8 +10,10 @@ import reportWebVitals from './reportWebVitals';
 import 'tachyons';
 import { searchRobots, getRobotsReducer } from './reducers';
 
+// Logs all Redux data
 const logger = createLogger();
 const rootReducer = combineReducers({ searchRobots, getRobotsReducer })
+// Creating Redux store
 const store = 
   createStore(rootReducer, applyMiddleware(thunkMiddleware, logger))
 
