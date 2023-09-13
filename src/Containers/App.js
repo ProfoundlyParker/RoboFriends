@@ -5,6 +5,7 @@ import SearchBox from "../Components/SearchBox";
 import Scroll from "../Components/Scroll";
 import "./App.css";
 import { setSearchField, requestRobots } from '../actions.js'
+import Header from "../Components/Header";
 
 
 const App = ({ store }) => { 
@@ -44,7 +45,7 @@ const App = ({ store }) => {
         <h1>Waiting for API...</h1> :
         (
             <div className="tc">
-            <h1 className="f1">RoboFriends</h1>
+            <Header />
             <SearchBox searchChange={onSearchChange}/>
             <Scroll>
                 {
