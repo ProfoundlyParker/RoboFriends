@@ -9,6 +9,7 @@ import App from './Containers/App';
 import reportWebVitals from './reportWebVitals';
 import 'tachyons';
 import { searchRobots, getRobotsReducer } from './reducers';
+import * as serviceWorker from './serviceWorker';
 
 // Logs all Redux data
 const logger = createLogger();
@@ -30,3 +31,5 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+serviceWorker.register();
