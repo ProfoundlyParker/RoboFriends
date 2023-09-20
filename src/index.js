@@ -8,7 +8,8 @@ import './index.css';
 import App from './Containers/App';
 import 'tachyons';
 import { searchRobots, getRobotsReducer } from './reducers';
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+
 
 // Logs all Redux data
 const logger = createLogger();
@@ -27,4 +28,4 @@ root.render(
 );
 
 
-serviceWorker.register();
+serviceWorkerRegistration.register();
