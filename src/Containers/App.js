@@ -41,7 +41,7 @@ const App = ({ store }) => {
         const newRobot = searchResults;
 
     //Returns waiting for API if API link is down and can't load bots
-        return !newRobot.length ?
+        return !robosUsers.length ?
         <h1>Waiting for API...</h1> :
         (
             <div className="tc">
@@ -53,7 +53,8 @@ const App = ({ store }) => {
                 }
             </Scroll>
             </div>
-        )};
+        )
+    };
 
 
 export default App;
