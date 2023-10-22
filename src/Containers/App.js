@@ -8,20 +8,23 @@ import { setSearchField, requestRobots } from '../actions.js'
 import Header from "../Components/Header";
 
 
+
 const App = ({ store }) => { 
-    // Set State for searchBox
+    // Set state for searchBox
     const [searchResults, setSearchResults] = useState([]);
+
+    // Sets state for robots and isPending
+    const getRobotsReducer = useSelector(state => state.getRobotsReducer);
+    const { isPending, users: robosUsers } = getRobotsReducer;
     //Access state changes to search box
     const dispatch = useDispatch();
     const onSearchChange = (event) => {
         dispatch(setSearchField(event.target.value))
     };
+    // Sets state for text
     const text = useSelector(state => state.searchRobots.searchField)
 
-    // Initial Robot State before searching
-    const robosUsers = useSelector(state => state.getRobotsReducer.users)
-
-
+    // Select robots from state
     useEffect(() =>  {
         dispatch(requestRobots());
     }, [dispatch])
@@ -29,28 +32,31 @@ const App = ({ store }) => {
  
     //Can search for robots based on first or last name, or email
         useEffect(() => {
-            const filteredRobots = robosUsers.filter(robots => {
-                    return robots.firstName.toLowerCase().includes(text.toLowerCase()) || 
-                    robots.lastName.toLowerCase().includes(text.toLowerCase()) ||
-                    robots.email.toLowerCase().includes(text.toLowerCase())
-            });
-            setSearchResults(filteredRobots);
-        }, [text,robosUsers])
+            const users = robosUsers.users;
+            if (Array.isArray(users)) {
+                const filteredRobots = users.filter((robots) => {
+                    return (
+                        robots.firstName.toLowerCase().includes(text.toLowerCase()) ||
+                        robots.lastName.toLowerCase().includes(text.toLowerCase()) ||
+                        robots.email.toLowerCase().includes(text.toLowerCase())
+                    );
+                });
+                setSearchResults(filteredRobots);
+            }
+        }, [text, robosUsers]);
 
-        // Set CardList to display search results
-        const newRobot = searchResults;
 
     //Returns waiting for API if API link is down and can't load bots
-        return !robosUsers.length ?
-        <h1>Waiting for API...</h1> :
-        (
+        return isPending ? (
+        <h1>Waiting for API...</h1> 
+        ) : (
             <div className="tc">
             <Header />
             <SearchBox searchChange={onSearchChange}/>
             <Scroll>
-                {
-                    text === "" ? <CardList robots={ robosUsers }/> : <CardList robots={ newRobot }/>
-                }
+                {/* Displays robots array when searchfield is empty, updates cards with search
+                results to display requested robots */}
+                <CardList robots={text === "" ? robosUsers.users : searchResults} />
             </Scroll>
             </div>
         )

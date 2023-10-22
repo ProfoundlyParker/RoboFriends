@@ -1,18 +1,21 @@
 import React from "react";
 import Card from './Card';
 
-//Maps through JSON API to get robot's info
+//Maps through JSON API array to get robot's info
 const CardList = ({ robots }) => {
+    if (!Array.isArray(robots)) {
+        return <div>Waiting for API...</div>;
+    }
     return (
     <div>
-        {robots.map((user, i) => {
+        {robots.map((robot) => {
                 return (
                 <Card 
-                key={robots[i].id}
-                firstName={robots[i].firstName} 
-                lastName={robots[i].lastName}
-                email={robots[i].email}
-                image={robots[i].image}
+                key={robot.id}
+                firstName={robot.firstName} 
+                lastName={robot.lastName}
+                email={robot.email}
+                image={robot.image}
                 />
                 );
             })}
