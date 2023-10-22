@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to snapshot Card component 1`] = `
+<div
+  className="tc background dib br4 ma2 grow bw2 shadow-5"
+>
+  <img
+    alt="robots"
+    height="300px"
+    width="300px"
+  />
+  <div>
+    <h2>
+       
+    </h2>
+    <p />
+  </div>
+</div>
+`;

@@ -41,15 +41,15 @@ export const getRobotsReducer = (state=initialStateRobots, action) => {
         case REQUEST_ROBOTS_SUCCESS:
             return {
                 ...state,
-                isPending: false,
-                users: action.payload.users
-            }
+                users: action.payload,
+                isPending: false
+            };
         case REQUEST_ROBOTS_FAILED:
             return {
                 ...state,
                 isPending: false,
-                error: action.error
-            }
+                error: action.payload
+            };
         default:
             return state;
     }
