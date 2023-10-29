@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to snapshot Scroll component 1`] = `
+<div
+  style={
+    Object {
+      "border": "none",
+      "height": "500px",
+      "overflowY": "scroll",
+    }
+  }
+/>
+`;

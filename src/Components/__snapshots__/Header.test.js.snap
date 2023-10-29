@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to snapshot Header component 1`] = `
+<h1
+  className="f1"
+>
+  RoboFriends
+</h1>
+`;
