@@ -1,8 +1,16 @@
 import React from 'react';
 import './Card.css';
 
+// Added types for card props received
+type CardProps = {
+    firstName: string;
+    lastName: string;
+    email: string;
+    image: string;
+}
+
 // Displays robot cards with personal info and images
-const Card = ({ firstName, lastName, email, image }) => {
+const Card: React.FC<CardProps> = ({ firstName, lastName, email, image }) => {
     return (
         <div className='tc background dib br4 ma2 grow bw2 shadow-5'>
             <img src={image} height='300px' width='300px' alt="robots"></img>

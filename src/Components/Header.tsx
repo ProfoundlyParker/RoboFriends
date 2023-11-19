@@ -2,10 +2,10 @@ import React, { Component } from "react";
 
 class Header extends Component {
     // Will never re-render header
-    shouldComponentUpdate(nextProps, nextState) {
+    shouldComponentUpdate(nextProps: any, nextState: any): boolean {
         return false;
     }
-    render() {
+    render(): JSX.Element {
         return <h1 className="f1">RoboFriends</h1>
     }
     
