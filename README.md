@@ -2,15 +2,15 @@
   Live Site: https://profoundlyparker.github.io/RoboFriends/
 </h1>
 
-<p>This is a Zero to Mastery Complete Web Developer's course project. I've added React Hooks + Redux + Jest to this project and made some style changes. I also chose to use a more complex API than the course did.<br>
+<p>This is a Zero to Mastery Complete Web Developer's course project. I've added React Hooks + Redux + Jest + TypeScript to this project and made some style changes. I also chose to use a more complex API than the course did.<br>
 DummyJSON data: <a href='https://dummyjson.com/users'>DummyJSON API</a><br>
 JSON Placeholder data used in ZTM course: <a href='https://jsonplaceholder.typicode.com/users'>JSON Placeholder API</a></p>
 
 ![robofriends](src/Readme-imgs/robofriends.png)
 
 ## Description
-<p>A React app that uses DummyJSON API to display robot cards. Built with <b>React.js</b>, <b>React Hooks</b>, <b>Redux</b>, <b>Tachyon CSS</b>, <b>DummyJSON API</b>, deployed on <b>GitHub Pages</b></p>
-<p>I have built tests using <b>Jest</b>, <b>Enzyme</b>, <b>React Testing Library</b>, and additional libraries for Redux actions & reducers, App container, and several pure components. I plan to convert <b>Tachyons</b> to <b>Tailwind CSS</b> soon and I will also be converting <b>JavaScript</b> to <b>TypeScript</b> soon!</p>
+<p>A React app that uses DummyJSON API to display robot cards. Built with <b>React.js</b>, <b>React Hooks</b>, <b>Redux</b>, <b>TypeScript</b>, <b>Tachyon CSS</b>, <b>DummyJSON API</b>, deployed on <b>GitHub Pages</b></p>
+<p>I have built tests using <b>Jest</b>, <b>Enzyme</b>, <b>React Testing Library</b>, and additional libraries for Redux actions & reducers, App container, and several pure components. I plan to convert <b>Tachyons</b> to <b>Tailwind CSS</b> soon!</p>
 
 <p><i>A huge thanks to Andrei Neagoie for creating <a href='https://zerotomastery.io/courses/coding-bootcamp/'>Zero to Mastery Complete Web Developer Course</a> and the entire Zero To Mastery platform to help encourage new developers like myself to pursue their passions!</i></p><br>
 
