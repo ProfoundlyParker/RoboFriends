@@ -1,4 +1,4 @@
-import * as actions from './actions';
+import * as actions from './actions.ts';
 import * as types from './constants'
 
 import configureStore from 'redux-mock-store';

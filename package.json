@@ -10,6 +10,11 @@
   },
   "dependencies": {
     "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^29.5.8",
+    "@types/node": "^20.9.1",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@types/react-redux": "^7.1.30",
     "gh-pages": "^5.0.0",
     "plugins": "@babel/plugin-proposal-private-property-in-object",
     "react": "^18.2.0",
@@ -19,6 +24,7 @@
     "redux": "^4.2.1",
     "redux-logger": "^3.0.6",
     "tachyons": "^4.12.0",
+    "typescript": "^5.2.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -51,6 +57,7 @@
     "@cfaester/enzyme-adapter-react-18": "^0.7.1",
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/react": "^14.0.0",
+    "@types/redux-logger": "^3.0.12",
     "enzyme": "^3.11.0",
     "enzyme-to-json": "^3.6.2",
     "jest": "^27.5.1",

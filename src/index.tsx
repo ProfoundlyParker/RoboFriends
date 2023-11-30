@@ -13,16 +13,24 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 // Logs all Redux data
 const logger = createLogger();
-const rootReducer = combineReducers({ searchRobots, getRobotsReducer })
+
+// Combine reducers directly
+const rootReducer = combineReducers({ 
+  searchRobots: searchRobots, 
+  getRobotsReducer: getRobotsReducer })
+
+// Define RootState directly
+export type RootState = ReturnType<typeof rootReducer>;
 // Creating Redux store
 const store = 
   createStore(rootReducer, applyMiddleware(thunk, logger))
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// ! behind root because HTML root element should always be present
+const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App/>
+      <App store={store}/>
     </Provider>
   </React.StrictMode>
 );

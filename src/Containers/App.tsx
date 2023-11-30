@@ -1,28 +1,56 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux';
-import CardList from "../Components/CardList";
-import SearchBox from "../Components/SearchBox";
-import Scroll from "../Components/Scroll";
+import CardList from "../Components/CardList.tsx";
+import SearchBox from "../Components/SearchBox.tsx";
+import Scroll from "../Components/Scroll.tsx";
 import "./App.css";
-import { setSearchField, requestRobots } from '../actions.js'
-import Header from "../Components/Header";
+import { setSearchField, requestRobots } from '../actions.ts'
+import Header from "../Components/Header.tsx";
+import { ThunkDispatch } from "redux-thunk";
+import { AnyAction, Store } from "redux";
 
+// Define RootState
+type RootState = {
+    getRobotsReducer: {
+        isPending: boolean;
+        users: {
+            users: Robot[]; // Define the Robot type as per your application
+        };
+    };
+    searchRobots: {
+        searchField: string;
+    }
+}
 
+// Define Robot type
+export type Robot = {
+    id: number;
+    firstName: string;
+    lastName: string;
+    email: string;
+    image: string;
+}
 
-const App = ({ store }) => { 
+// App props from Redux
+type AppProps = {
+    store: Store;
+}
+
+const App: React.FC<AppProps> = ({ store }) => { 
+    const dispatch = useDispatch<ThunkDispatch<RootState, any, AnyAction>>();
     // Set state for searchBox
-    const [searchResults, setSearchResults] = useState([]);
+    const [searchResults, setSearchResults] = useState<Robot[]>([]);
 
     // Sets state for robots and isPending
-    const getRobotsReducer = useSelector(state => state.getRobotsReducer);
+    const getRobotsReducer = useSelector((state: RootState) => state.getRobotsReducer);
     const { isPending, users: robosUsers } = getRobotsReducer;
     //Access state changes to search box
-    const dispatch = useDispatch();
-    const onSearchChange = (event) => {
+    // const dispatch = useDispatch();
+    const onSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         dispatch(setSearchField(event.target.value))
     };
     // Sets state for text
-    const text = useSelector(state => state.searchRobots.searchField)
+    const text = useSelector((state: RootState) => state.searchRobots.searchField)
 
     // Select robots from state
     useEffect(() =>  {
