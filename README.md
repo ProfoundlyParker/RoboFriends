@@ -2,6 +2,7 @@
   Live Site: https://profoundlyparker.github.io/RoboFriends/
 </h1>
 
+<h2>Note: As of 1/14/24, I noticed that the API has changed the images from robots to cats. I will be addressing this change ASAP.</h2>
 <p>This is a Zero to Mastery Complete Web Developer's course project. I've added React Hooks + Redux + Jest + TypeScript to this project and made some style changes. I also chose to use a more complex API than the course did.<br>
 DummyJSON data: <a href='https://dummyjson.com/users'>DummyJSON API</a><br>
 JSON Placeholder data used in ZTM course: <a href='https://jsonplaceholder.typicode.com/users'>JSON Placeholder API</a></p>
