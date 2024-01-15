@@ -78,7 +78,6 @@ const initialStateRobots: RobotsState = {
 // Robot API actions
 export const getRobotsReducer: Reducer<RobotsState, RobotsAction> = (
     state=initialStateRobots, action) => {
-        console.log('current state:', state)
     switch(action.type) {
         case REQUEST_ROBOTS_PENDING:
             return {

@@ -2,7 +2,7 @@
 
 exports[`expect to snapshot Card component 1`] = `
 <div
-  className="tc background dib br4 ma2 grow bw2 shadow-5"
+  className="text-center bg-card-bg inline-block rounded-2xl m-2 grow border-0 shadow-2xl"
 >
   <img
     alt="robots"
@@ -10,10 +10,14 @@ exports[`expect to snapshot Card component 1`] = `
     width="300px"
   />
   <div>
-    <h2>
+    <h2
+      className="block box-border text-2xl font-bold mt-5 ms-0 me-0 m-4"
+    >
        
     </h2>
-    <p />
+    <p
+      className="box-border block ms-0 me-0 m-4 mt-5 mb-4"
+    />
   </div>
 </div>
 `;

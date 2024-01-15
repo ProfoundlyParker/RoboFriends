@@ -8,7 +8,7 @@ type ScrollProps = {
 //Scroll component that handles Y overflow
 const Scroll: React.FC<ScrollProps> = (props) => {
     return (
-        <div style={{overflowY: 'scroll', border: 'none', height: '500px'}}>
+        <div className='overflow-y-scroll border-none h-scroll-h'>
             {props.children}
         </div>
     );
