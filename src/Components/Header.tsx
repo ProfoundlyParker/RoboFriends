@@ -6,7 +6,7 @@ class Header extends Component {
         return false;
     }
     render(): JSX.Element {
-        return <h1 className="f1">RoboFriends</h1>
+        return <h1 className="text-5xl mb-9 mt-9">RoboFriends</h1>
     }
     
 }

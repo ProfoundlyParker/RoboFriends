@@ -78,7 +78,7 @@ const App: React.FC<AppProps> = ({ store }) => {
         return isPending ? (
         <h1>Waiting for API...</h1> 
         ) : (
-            <div className="tc">
+            <div className="text-center">
             <Header />
             <SearchBox searchChange={onSearchChange}/>
             <Scroll>
