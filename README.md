@@ -13,7 +13,7 @@ JSON Placeholder data used in ZTM course: <a href='https://jsonplaceholder.typic
 <p>I have built tests using <b>Jest</b>, <b>Enzyme</b>, <b>React Testing Library</b>, and additional libraries for Redux actions & reducers, App container, and several pure components. I plan to convert <b>Tachyons</b> to <b>Tailwind CSS</b> soon!</p>
 
 <p><i>A huge thanks to Andrei Neagoie for creating <a href='https://zerotomastery.io/courses/coding-bootcamp/'>Zero to Mastery Complete Web Developer Course</a> and the entire Zero To Mastery platform to help encourage new developers like myself to pursue their passions!</i></p>
-<p>Note: Robot images may vary from screenshots/gifs below. The DummyJSON API recently updated their image urls, resulting in different robots.</p><br>
+<p>Note: Robot images may vary from screenshots/gifs below. The DummyJSON API recently updated their image URLs, resulting in different robots.</p><br>
 
 ## Features
 <li>Scroll through 30 RoboFriends</li><br>
