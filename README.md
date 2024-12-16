@@ -5,10 +5,10 @@
 ![robofriends](src/Readme-imgs/robofriends.png)
 
 ## Description
-<p>A React app that uses DummyJSON API data to display robot cards. Built with <strong>React.js</strong>, <strong>React Hooks</strong>, <strong>Redux</strong>, <strong>TypeScript</strong>, <strong>Tailwind CSS</strong>, and <strong>DummyJSON API</strong>, deployed on <strong>GitHub Pages</strong></p>
+<p>A React app that uses DummyJSON API data to display robot cards. Built with <strong>React.js</strong>, <strong>React Hooks</strong>, <strong>Redux</strong>, <strong>TypeScript</strong>, <strong>Tailwind CSS</strong>, <strong>RoboHash</strong>, and <strong>DummyJSON API</strong>, deployed on <strong>GitHub Pages</strong></p>
 <p>I have built tests using <strong>Jest</strong>, <strong>Enzyme</strong>, <strong>React Testing Library</strong>, and additional libraries for Redux actions & reducers, the App container, and several pure components.</p>
 
-<p>Note: Robot images may vary from screenshots/gifs below. The DummyJSON API recently updated their image URLs, resulting in different robots.</p>
+<p>Note: Robot images may vary from screenshots/gifs below. The DummyJSON API recently updated their image URLs, so I switched to using RoboHash for images for theme continuity.</p>
 
 ## Features
 <li>Scroll through 30 RoboFriends</li><br>
