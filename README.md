@@ -2,18 +2,13 @@
   Live Site: https://profoundlyparker.github.io/RoboFriends/
 </h1>
 
-<p>This is a Zero to Mastery Complete Web Developer's course project. I've added React Hooks + Redux + Jest + TypeScript + Tailwind CSS to this project and made some style changes. I also chose to use a more complex API than the course did.<br>
-DummyJSON data: <a href='https://dummyjson.com/users'>DummyJSON API</a><br>
-JSON Placeholder data used in ZTM course: <a href='https://jsonplaceholder.typicode.com/users'>JSON Placeholder API</a></p>
-
 ![robofriends](src/Readme-imgs/robofriends.png)
 
 ## Description
-<p>A React app that uses DummyJSON API to display robot cards. Built with <strong>React.js</strong>, <strong>React Hooks</strong>, <strong>Redux</strong>, <strong>TypeScript</strong>, <strong>Tailwind CSS</strong>, <strong>DummyJSON API</strong>, deployed on <strong>GitHub Pages</strong></p>
-<p>I have built tests using <strong>Jest</strong>, <strong>Enzyme</strong>, <strong>React Testing Library</strong>, and additional libraries for Redux actions & reducers, App container, and several pure components.</p>
+<p>A React app that uses DummyJSON API data to display robot cards. Built with <strong>React.js</strong>, <strong>React Hooks</strong>, <strong>Redux</strong>, <strong>TypeScript</strong>, <strong>Tailwind CSS</strong>, and <strong>DummyJSON API</strong>, deployed on <strong>GitHub Pages</strong></p>
+<p>I have built tests using <strong>Jest</strong>, <strong>Enzyme</strong>, <strong>React Testing Library</strong>, and additional libraries for Redux actions & reducers, the App container, and several pure components.</p>
 
-<p><em>A huge thanks to Andrei Neagoie for creating <a href='https://zerotomastery.io/courses/coding-bootcamp/'>Zero to Mastery Complete Web Developer Course</a> and the entire Zero To Mastery platform to help encourage new developers like myself to pursue their passions!</em></p>
-<p>Note: Robot images may vary from screenshots/gifs below. The DummyJSON API recently updated their image URLs, resulting in different robots.</p><br>
+<p>Note: Robot images may vary from screenshots/gifs below. The DummyJSON API recently updated their image URLs, resulting in different robots.</p>
 
 ## Features
 <li>Scroll through 30 RoboFriends</li><br>
