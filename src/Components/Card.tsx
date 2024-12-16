@@ -9,9 +9,9 @@ type CardProps = {
 }
 
 // Displays robot cards with personal info and images
-const Card: React.FC<CardProps> = ({ firstName, lastName, email, image }) => {
+const Card: React.FC<CardProps> = ({ firstName, lastName, email }) => {
     // Displays robot images instead of cat images
-    const robotImage = image?.replace('?set=set4', '')
+    const robotImage = `https://robohash.org/${email}?set=set1`
     return (
         <div className='text-center bg-card-bg inline-block rounded-2xl m-2 grow border-0 shadow-2xl'>
             <img src={robotImage} height='300px' width='300px' alt="robots"></img>
