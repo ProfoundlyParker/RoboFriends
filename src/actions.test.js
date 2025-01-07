@@ -39,7 +39,7 @@ describe('requestRobots', () => {
 
     // Tests REQUEST_ROBOTS_SUCCESS and the API call
     it('creates REQUEST_ROBOTS_SUCCESS when fetching robots has been done', async () => {
-        const mockData = {"users": [{ id: 1, name: 'Robot 1' }]}; // Sample data to be returned by the mocked API call
+        const mockData = {"users": [{ id: 1, name: 'Robot 1', email: 'robot1@example.com' }]}; // Sample data to be returned by the mocked API call
       // Mocking the API call
         nock('https://dummyjson.com')
         // Prevented CORS errors with testing API
@@ -50,9 +50,14 @@ describe('requestRobots', () => {
         .get('/users')
         .reply(200, mockData);
     
+        const updatedUsers = mockData.users.map((user) => ({
+            ...user,
+            image: `https://robohash.org/${user.email}?set=set1&size=300x300`,
+        }));
+
         const expectedActions = [
         { type: 'REQUEST_ROBOTS_PENDING' },
-        { type: 'REQUEST_ROBOTS_SUCCESS', payload: mockData },
+        { type: 'REQUEST_ROBOTS_SUCCESS', payload: { ...mockData, users: updatedUsers } },
         ];
         const store = mockStore({});
     
