@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware, combineReducers } from "redux";
 import { createLogger } from "redux-logger";
-import thunk from "redux-thunk";
+import { thunk } from "redux-thunk";
 import "./index.css";
 import App from "./Containers/App";
 import "tachyons";
