@@ -1,8 +1,7 @@
-import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import Header from "./Header";
 
-//Snapshot
 it("expect to snapshot Header component", () => {
-  expect(shallow(<Header />)).toMatchSnapshot();
+  const { asFragment } = render(<Header />);
+  expect(asFragment()).toMatchSnapshot();
 });

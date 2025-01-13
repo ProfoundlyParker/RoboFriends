@@ -2,13 +2,19 @@ import React from "react";
 import { render, screen, act } from "@testing-library/react";
 import { Provider } from "react-redux";
 import configureStore from "redux-mock-store";
-import thunk from "redux-thunk";
+import { thunk } from "redux-thunk";
 import App from "./App";
+import '@testing-library/jest-dom';
 
 const middlewares = [thunk];
 const mockStore = configureStore(middlewares);
 
 let store;
+
+test("jest-dom matchers work", () => {
+  document.body.innerHTML = '<div><span>Hello World</span></div>';
+  expect(screen.getByText("Hello World")).toBeInTheDocument();
+});
 
 // Test App component containing state using Redux + Hooks
 describe("App component", () => {

@@ -1,5 +1,4 @@
-import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import CardList from "./CardList";
 
 it("expect to snapshot CardList component", () => {
@@ -11,5 +10,6 @@ it("expect to snapshot CardList component", () => {
       email: "john@gmail.com",
     },
   ];
-  expect(shallow(<CardList robots={mockRobots} />)).toMatchSnapshot();
+  const { asFragment } = render(<CardList robots={mockRobots} />);
+  expect(asFragment()).toMatchSnapshot();
 });

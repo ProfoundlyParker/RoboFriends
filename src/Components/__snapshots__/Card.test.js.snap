@@ -1,23 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`expect to snapshot Card component 1`] = `
-<div
-  className="text-center bg-card-bg inline-block rounded-2xl m-2 grow border-0 shadow-2xl"
->
-  <img
-    alt="robots"
-    height="300px"
-    width="300px"
-  />
-  <div>
-    <h2
-      className="block box-border text-2xl font-bold mt-5 ms-0 me-0 m-4"
-    >
-       
-    </h2>
-    <p
-      className="box-border block ms-0 me-0 m-4 mt-5 mb-4"
+<DocumentFragment>
+  <div
+    class="text-center bg-card-bg inline-block rounded-2xl m-2 grow border-0 shadow-2xl"
+  >
+    <img
+      alt="robots"
+      height="300px"
+      width="300px"
     />
+    <div>
+      <h2
+        class="block box-border text-2xl font-bold mt-5 ms-0 me-0 m-4"
+      >
+         
+      </h2>
+      <p
+        class="box-border block ms-0 me-0 m-4 mt-5 mb-4"
+      />
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;

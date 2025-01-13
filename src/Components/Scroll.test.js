@@ -1,8 +1,8 @@
-import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import Scroll from "./Scroll";
 
 //Snapshot
 it("expect to snapshot Scroll component", () => {
-  expect(shallow(<Scroll />)).toMatchSnapshot();
+  const { asFragment } = render(<Scroll />);
+  expect(asFragment()).toMatchSnapshot();
 });

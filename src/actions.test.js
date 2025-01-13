@@ -1,12 +1,12 @@
 import * as actions from "./actions.ts";
 import * as types from "./constants";
 
-import configureStore from "redux-mock-store";
-import thunk from "redux-thunk";
+import configureMockStore from "redux-mock-store";
+import { thunk } from "redux-thunk";
 import nock from "nock";
 
 const middlewares = [thunk];
-const mockStore = configureStore([thunk]);
+const mockStore = configureMockStore([thunk]);
 
 // Tests that the searchfield returns the text entered
 describe("tests setSearchField function", () => {

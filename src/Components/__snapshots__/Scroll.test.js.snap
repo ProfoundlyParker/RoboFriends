@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`expect to snapshot Scroll component 1`] = `
-<div
-  className="overflow-y-scroll border-none h-scroll-h"
-/>
+<DocumentFragment>
+  <div
+    class="overflow-y-scroll border-none h-scroll-h"
+  />
+</DocumentFragment>
 `;
